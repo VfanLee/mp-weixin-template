@@ -1,8 +1,12 @@
 // index.js
-const defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0'
+import dayjs from 'dayjs'
+const defaultAvatarUrl =
+  'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0'
 
 Page({
+  nowTimeTimer: null,
   data: {
+    nowTime: dayjs().format('YYYY-MM-DD HH:mm:ss'),
     motto: 'Hello World',
     userInfo: {
       avatarUrl: defaultAvatarUrl,
@@ -12,25 +16,54 @@ Page({
     canIUseGetUserProfile: wx.canIUse('getUserProfile'),
     canIUseNicknameComp: wx.canIUse('input.type.nickname'),
   },
+  onLoad() {
+    this.startNowTimeCounter()
+  },
+  onShow() {
+    this.startNowTimeCounter()
+  },
+  onHide() {
+    this.stopNowTimeCounter()
+  },
+  onUnload() {
+    this.stopNowTimeCounter()
+  },
+  updateNowTime() {
+    this.setData({
+      nowTime: dayjs().format('YYYY-MM-DD HH:mm:ss'),
+    })
+  },
+  startNowTimeCounter() {
+    if (this.nowTimeTimer) return
+    this.updateNowTime()
+    this.nowTimeTimer = setInterval(() => {
+      this.updateNowTime()
+    }, 1000)
+  },
+  stopNowTimeCounter() {
+    if (!this.nowTimeTimer) return
+    clearInterval(this.nowTimeTimer)
+    this.nowTimeTimer = null
+  },
   bindViewTap() {
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '/pages/logs/logs',
     })
   },
   onChooseAvatar(e) {
     const { avatarUrl } = e.detail
     const { nickName } = this.data.userInfo
     this.setData({
-      "userInfo.avatarUrl": avatarUrl,
-      hasUserInfo: nickName && avatarUrl && avatarUrl !== defaultAvatarUrl,
+      'userInfo.avatarUrl': avatarUrl,
+      'hasUserInfo': nickName && avatarUrl && avatarUrl !== defaultAvatarUrl,
     })
   },
   onInputChange(e) {
     const nickName = e.detail.value
     const { avatarUrl } = this.data.userInfo
     this.setData({
-      "userInfo.nickName": nickName,
-      hasUserInfo: nickName && avatarUrl && avatarUrl !== defaultAvatarUrl,
+      'userInfo.nickName': nickName,
+      'hasUserInfo': nickName && avatarUrl && avatarUrl !== defaultAvatarUrl,
     })
   },
   getUserProfile(e) {
@@ -41,9 +74,9 @@ Page({
         console.log(res)
         this.setData({
           userInfo: res.userInfo,
-          hasUserInfo: true
+          hasUserInfo: true,
         })
-      }
+      },
     })
   },
 })

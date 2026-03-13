@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/VfanLee/mp-weixin-template/issues"
   },
-  "homepage": "https://github.com/VfanLee/mp-weixin-template#readme"
+  "homepage": "https://github.com/VfanLee/mp-weixin-template#readme",
+  "dependencies": {
+    "dayjs": "^1.11.20"
+  }
 }
