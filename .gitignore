@@ -1,17 +1,3 @@
 node_modules/
 
-.project
 project.private.config.json
-unpackage/
-
-dist/
-miniprogram_npm/
-
-*.log
-.DS_Store
-.idea/
-.vscode/
-.cache/
-
-config/keys.js
-.env
