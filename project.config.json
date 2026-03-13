@@ -31,7 +31,24 @@
     "disableUseStrict": false,
     "useCompilerPlugins": false
   },
-  "condition": {},
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "api",
+          "pathName": "pages/api/api",
+          "query": "",
+          "launchMode": "default"
+        },
+        {
+          "name": "component",
+          "pathName": "pages/component/component",
+          "query": "",
+          "launchMode": "default"
+        }
+      ]
+    }
+  },
   "editorSetting": {
     "tabIndent": "auto",
     "tabSize": 2

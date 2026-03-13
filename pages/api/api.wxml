@@ -1,0 +1,4 @@
+<!--pages/api/api.wxml-->
+<view>
+  <navigator open-type="navigate" url="/subpackages/api/env/env">env</navigator>
+</view>

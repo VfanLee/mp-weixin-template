@@ -1,0 +1,4 @@
+<!--pages/component.wxml-->
+<view>
+  <navigator open-type="navigate" url="/subpackages/component/button/button">button</navigator>
+</view>

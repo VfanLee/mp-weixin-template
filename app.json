@@ -1,8 +1,27 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/component/component",
+    "pages/api/api"
   ],
+  "subPackages": [
+    {
+      "root": "subpackages/api",
+      "name": "api",
+      "pages": [
+        "env/env"
+      ]
+    },
+    {
+      "root": "subpackages/component",
+      "name": "component",
+      "pages": [
+        "button/button"
+      ]
+    }
+  ],
+  "preloadRule": {},
   "window": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "Weixin",

@@ -1,0 +1,4 @@
+<!--subpackages/component/button/button.wxml-->
+<view>
+  <button>btn</button>
+</view>
