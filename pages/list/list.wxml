@@ -1,0 +1,8 @@
+<!-- pages/list/list.wxml -->
+<view class="list-page">
+  <view class="apps">
+    <navigator class="app-item" hover-class="none" url="/pages/todos/todos">Todos</navigator>
+    <navigator class="app-item" hover-class="none" url="/pages/component/component">微信组件</navigator>
+    <navigator class="app-item" hover-class="none" url="/pages/api/api">微信 API</navigator>
+  </view>
+</view>

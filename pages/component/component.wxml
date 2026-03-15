@@ -1,4 +1,6 @@
-<!--pages/component.wxml-->
-<view>
-  <navigator open-type="navigate" url="/subpackages/component/button/button">button</navigator>
+<!-- pages/component.wxml -->
+<view class="component-page">
+  <view class="list-group">
+    <button type="default" bind:tap="view">button</button>
+  </view>
 </view>

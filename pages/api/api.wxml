@@ -1,4 +1,6 @@
-<!--pages/api/api.wxml-->
-<view>
-  <navigator open-type="navigate" url="/subpackages/api/env/env">env</navigator>
+<!-- pages/api/api.wxml -->
+<view class="api-page">
+  <view class="grid">
+    <button type="primary">env</button>
+  </view>
 </view>

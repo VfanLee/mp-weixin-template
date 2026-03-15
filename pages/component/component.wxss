@@ -1,1 +1,4 @@
 /* pages/component.wxss */
+.component-page {
+  padding: 24rpx;
+}

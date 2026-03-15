@@ -1,4 +1,18 @@
-<!--subpackages/component/button/button.wxml-->
+<!-- subpackages/component/button/button.wxml -->
 <view>
-  <button>btn</button>
+  <view class="section">
+    <button type="default">btn</button>
+    <button type="primary">btn</button>
+    <button type="warn">btn</button>
+  </view>
+  <view class="section">
+    <button type="default" plain>btn</button>
+    <button type="primary" plain>btn</button>
+    <button type="warn" plain>btn</button>
+  </view>
+  <view class="section">
+    <button type="default" size="mini">btn</button>
+    <button type="primary" size="mini">btn</button>
+    <button type="warn" size="mini">btn</button>
+  </view>
 </view>

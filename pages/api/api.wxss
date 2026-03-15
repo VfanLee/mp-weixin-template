@@ -1,1 +1,4 @@
 /* pages/api/api.wxss */
+.api-page {
+  padding: 24rpx;
+}

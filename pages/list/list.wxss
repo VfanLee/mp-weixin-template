@@ -1,0 +1,22 @@
+/* pages/list/list.wxss */
+.list-page {
+  margin: 24rpx;
+}
+
+.apps {
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.app-item {
+  padding: 16rpx 24rpx;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.app-item:active {
+  background-color: #fff;
+}

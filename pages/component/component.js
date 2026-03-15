@@ -1,24 +1,12 @@
 // pages/component.js
-Component({
-
-  /**
-   * 组件的属性列表
-   */
-  properties: {
-
+Page({
+  data: {},
+  view() {
+    wx.navigateTo({
+      url: '/subpackages/component/button/button',
+      success: (result) => {},
+      fail: () => {},
+      complete: () => {},
+    })
   },
-
-  /**
-   * 组件的初始数据
-   */
-  data: {
-
-  },
-
-  /**
-   * 组件的方法列表
-   */
-  methods: {
-
-  }
 })

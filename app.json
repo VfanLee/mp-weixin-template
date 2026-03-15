@@ -3,31 +3,57 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/component/component",
-    "pages/api/api"
+    "pages/api/api",
+    "pages/list/list",
+    "pages/todos/todos"
   ],
   "subPackages": [
     {
-      "root": "subpackages/api",
       "name": "api",
+      "root": "subpackages/api",
       "pages": [
         "env/env"
       ]
     },
     {
-      "root": "subpackages/component",
       "name": "component",
+      "root": "subpackages/component",
       "pages": [
         "button/button"
       ]
     }
   ],
   "preloadRule": {},
+  "tabBar": {
+    "color": "#030712",
+    "selectedColor": "#030712",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/assets/tabbar/home.png",
+        "selectedIconPath": "/assets/tabbar/home-active.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "",
+        "iconPath": "/assets/tabbar/apps.png",
+        "selectedIconPath": "/assets/tabbar/apps-active.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志",
+        "iconPath": "/assets/tabbar/user-search.png",
+        "selectedIconPath": "/assets/tabbar/user-search-active.png"
+      }
+    ]
+  },
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "mp-weixin",
     "navigationBarBackgroundColor": "#ffffff"
   },
-  "style": "v2",
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents"
