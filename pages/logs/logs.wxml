@@ -1,4 +1,7 @@
 <!--logs.wxml-->
+<view style="height: {{ navbarHeight }}px;background-color: #ffffff;">
+  <view></view>
+</view>
 <scroll-view class="scrollarea" scroll-y type="list">
   <block wx:for="{{logs}}" wx:key="timeStamp" wx:for-item="log">
     <view class="log-item">{{index + 1}}. {{log.date}}</view>

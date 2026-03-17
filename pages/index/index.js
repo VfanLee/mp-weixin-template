@@ -1,12 +1,12 @@
 // index.js
-import dayjs from 'dayjs'
+import { format } from '../../utils/date'
 const defaultAvatarUrl =
   'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0'
 
 Page({
   nowTimeTimer: null,
   data: {
-    nowTime: dayjs().format('YYYY-MM-DD HH:mm:ss'),
+    nowTime: format(),
     motto: 'Hello World',
     userInfo: {
       avatarUrl: defaultAvatarUrl,
@@ -30,7 +30,7 @@ Page({
   },
   updateNowTime() {
     this.setData({
-      nowTime: dayjs().format('YYYY-MM-DD HH:mm:ss'),
+      nowTime: format(),
     })
   },
   startNowTimeCounter() {

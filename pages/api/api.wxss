@@ -1,4 +1,11 @@
 /* pages/api/api.wxss */
 .api-page {
   padding: 24rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+button {
+  width: 100%;
 }

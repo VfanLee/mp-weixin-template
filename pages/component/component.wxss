@@ -2,3 +2,7 @@
 .component-page {
   padding: 24rpx;
 }
+
+.section {
+  margin-top: 24rpx;
+}

@@ -7,22 +7,7 @@
     "pages/list/list",
     "pages/todos/todos"
   ],
-  "subPackages": [
-    {
-      "name": "api",
-      "root": "subpackages/api",
-      "pages": [
-        "env/env"
-      ]
-    },
-    {
-      "name": "component",
-      "root": "subpackages/component",
-      "pages": [
-        "button/button"
-      ]
-    }
-  ],
+  "subPackages": [],
   "preloadRule": {},
   "tabBar": {
     "color": "#030712",

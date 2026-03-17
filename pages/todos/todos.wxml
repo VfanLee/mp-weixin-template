@@ -1,2 +1,9 @@
 <!--pages/todos/todos.wxml-->
-<view></view>
+<view class="todos-page">
+  <view class="search-input-wrap">
+    <search-input />
+  </view>
+  <scroll-view class="todo-list" scroll-y>
+    <view class="todo-item" wx:for="{{ todolist }}" wx:key="index">{{ item }}</view>
+  </scroll-view>
+</view>

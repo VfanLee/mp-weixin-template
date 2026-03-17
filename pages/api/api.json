@@ -1,4 +1,5 @@
 {
   "navigationBarTitleText": "微信 API",
+  "enablePullDownRefresh": true,
   "usingComponents": {}
 }

@@ -1,0 +1,5 @@
+<!--components/search-input/search-input.wxml-->
+<view class="search-input">
+  <input />
+  <button size="mini" type="primary">搜索</button>
+</view>

@@ -42,6 +42,13 @@ page {
   color: var(--gray-950);
 }
 
+button[type='primary'] {
+  background-color: var(--amber-500);
+}
+button[type='primary'].button-hover {
+  background-color: var(--amber-600);
+}
+
 .container {
   height: 100%;
   display: flex;

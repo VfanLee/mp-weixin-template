@@ -35,14 +35,20 @@
     "miniprogram": {
       "list": [
         {
-          "name": "api",
-          "pathName": "pages/api/api",
+          "name": "todos",
+          "pathName": "pages/todos/todos",
           "query": "",
           "launchMode": "default"
         },
         {
           "name": "component",
           "pathName": "pages/component/component",
+          "query": "",
+          "launchMode": "default"
+        },
+        {
+          "name": "api",
+          "pathName": "pages/api/api",
           "query": "",
           "launchMode": "default"
         }

@@ -1,6 +1,8 @@
 <!-- pages/api/api.wxml -->
 <view class="api-page">
-  <view class="grid">
-    <button type="primary">env</button>
-  </view>
+  <button bind:tap="clgEnv">env</button>
+  <button bind:tap="onJiaohu">交互</button>
+  <button bind:tap="onNavbar">Navbar（原生）</button>
+  <button bind:tap="onTabbar">Tabbar（原生）</button>
+  <button bind:tap="onBackground">背景</button>
 </view>

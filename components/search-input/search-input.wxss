@@ -1,0 +1,20 @@
+/* components/search-input/search-input.wxss */
+.search-input {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+}
+
+.search-input input {
+  flex: 1;
+  border: 1px solid var(--amber-500);
+  border-radius: 4px;
+  height: 54rpx;
+  line-height: 54rpx;
+}
+
+.search-input button {
+  margin: 0;
+  height: 54rpx;
+  line-height: 54rpx;
+}

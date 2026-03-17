@@ -1,1 +1,19 @@
 /* pages/todos/todos.wxss */
+.todos-page {
+  margin: 24rpx;
+}
+
+.search-input-wrap {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 24rpx;
+  background-color: #fff;
+}
+
+.todo-list {
+  margin-top: calc(54rpx + 48rpx);
+}

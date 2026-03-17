@@ -1,12 +1,8 @@
-// pages/component.js
+// pages/component/component.js
 Page({
   data: {},
-  view() {
-    wx.navigateTo({
-      url: '/subpackages/component/button/button',
-      success: (result) => {},
-      fail: () => {},
-      complete: () => {},
-    })
+  view(e) {
+    const { url } = e.currentTarget.dataset
+    wx.navigateTo({ url })
   },
 })
