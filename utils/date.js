@@ -1,5 +1,7 @@
-import dayjs from 'dayjs'
+const dayjs = require('dayjs')
 
-export function format(date = new Date(), template = 'YYYY-MM-DD HH:mm:ss') {
+function format(date = new Date(), template = 'YYYY-MM-DD HH:mm:ss') {
   return dayjs(date).format(template)
 }
+
+module.exports = { format }

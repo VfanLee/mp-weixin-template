@@ -1,10 +1,14 @@
 // index.js
-import { format } from '../../utils/date'
+const { format } = require('../../utils/date')
+
 const defaultAvatarUrl =
   'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0'
+const shareTitle = `mp-weixin-template`
+const shareImageUrl = `https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0`
 
 Page({
   nowTimeTimer: null,
+  shareTitle: `mp-weixin-template`,
   data: {
     nowTime: format(),
     motto: 'Hello World',
@@ -17,7 +21,22 @@ Page({
     canIUseNicknameComp: wx.canIUse('input.type.nickname'),
   },
   onLoad() {
+    wx.showShareMenu({ withShareTicket: true })
     this.startNowTimeCounter()
+  },
+  onShareAppMessage() {
+    return {
+      title: shareTitle,
+      path: '/pages/index/index',
+      imageUrl: shareImageUrl,
+    }
+  },
+  onShareTimeline() {
+    return {
+      title: shareTitle,
+      query: '',
+      imageUrl: shareImageUrl,
+    }
   },
   onShow() {
     this.startNowTimeCounter()
